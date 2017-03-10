@@ -6,7 +6,7 @@
 	// site information
 	$author = $metadata['author'];
 	$title = $metadata['title'];
-	$url = 'http://localhost/timetable';
+	$url = $metadata['url'];
 	$keywords = $metadata['keywords'];
 	$email = $metadata['email'];
 	$description = $metadata['description'];
