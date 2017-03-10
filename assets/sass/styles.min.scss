@@ -1,0 +1,30 @@
+// importing generic css frameworks
+@import url("../stylesheets/bootstrap.min.css");
+@import url("../stylesheets/font-awesome.min.css");
+@import url("../stylesheets/nprogress.css");
+
+// importing google fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+// importing variables
+@import 'variables';
+@import 'mixins';
+
+// importing mobile screen css
+@import 'xs';
+
+// importing tablet screen css
+@media(min-width: 768px){
+	@import 'sm';
+}
+
+// importing laptop screen css
+@media(min-width: 992px){
+	@import 'md';
+}
+
+// importing large screen css
+@media(min-width: 1091px){
+	@import 'lg';
+}
+

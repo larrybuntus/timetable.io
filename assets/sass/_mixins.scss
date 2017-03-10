@@ -1,0 +1,91 @@
+@mixin scroll($width,$background,$radius){
+    ::-webkit-scrollbar {
+        width: $width;
+    }
+
+    ::-ms-scrollbar {
+        width: $width;
+    }
+
+    ::-o-scrollbar {
+        width: $width;
+    }
+
+    ::-moz-scrollbar {
+        width: $width;
+    }
+
+    scrollbar {
+        width: $width;
+    }
+
+    /* Handle */
+
+    ::-webkit-scrollbar-thumb {
+        background: $background;
+        border-radius: $radius;
+    }
+
+    ::-ms-scrollbar-thumb {
+        background: $background;
+        border-radius: $radius;
+    }
+
+    ::-o-scrollbar-thumb {
+        background: $background;
+        border-radius: $radius;
+    }
+
+    ::-moz-scrollbar-thumb {
+        background: $background;
+        border-radius: $radius;
+    }
+
+    scrollbar-thumb {
+        background: $background;
+        border-radius: $radius;
+    }
+}
+
+@mixin outline(){
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -o-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+      
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+}
+
+@mixin flex(){
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+// @import "compass/css3";
+
+@mixin mesh($radius, $spacing, $blur, $color) {
+     $r: ($radius + $spacing/2);
+
+     $bg: radial-gradient(
+          circle,
+          $color ($radius - $blur),
+          transparent $radius
+     );
+    
+     $sqrt3: 1.732050807568877;
+
+     background: {
+          image: $bg, $bg;
+          size: (2*$r) (2*$sqrt3*$r);
+          position: 0 0, (-$r) (-$sqrt3*$r);
+     }
+}
